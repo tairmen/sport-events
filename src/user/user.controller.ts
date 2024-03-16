@@ -12,12 +12,6 @@ export class UserController {
     return this.userService.create(user);
   }
 
-  @UseGuards(AuthGuard('local'))
-  @Post('login')
-  async login(@Body() user: User): Promise<any> {
-    // Implement login logic here
-  }
-
   @Get()
   async findAll(): Promise<User[]> {
     return this.userService.findAll();
