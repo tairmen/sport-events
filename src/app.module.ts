@@ -9,11 +9,11 @@ import { AuthModule } from './auth/auth.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost', // Change this to your PostgreSQL server host
+      host: '172.17.0.3', // Change this to your PostgreSQL server host
       port: 5432, // Change this to your PostgreSQL server port
-      username: 'your_username', // Change this to your PostgreSQL username
-      password: 'your_password', // Change this to your PostgreSQL password
-      database: 'your_database_name', // Change this to your PostgreSQL database name
+      username: 'postgres', // Change this to your PostgreSQL username
+      password: 'Aa111111', // Change this to your PostgreSQL password
+      database: 'sport-events', // Change this to your PostgreSQL database name
       entities: [__dirname + '/**/*.entity{.ts,.js}'], // Path to your entity files
       synchronize: true, // Synchronize the entities with the database (be careful with this in production)
     }),
